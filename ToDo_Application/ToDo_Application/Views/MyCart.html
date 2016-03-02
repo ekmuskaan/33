@@ -1,0 +1,40 @@
+﻿<div class="span8">
+    <table class="table table-bordered">
+        <tr class="well">
+            <td>
+                <b>Item</b>
+            </td>
+            <td class="tdCenter">
+                <b>Quantity</b>
+            </td>
+            <td class="tdRight">
+                <b>Price</b>
+            </td>
+            <td />
+        </tr>
+        <!-- empty cart message -->
+        <!--<tr ng-hide="ShowMe" >
+      <td class="tdCenter" colspan="4">Your cart is empty. </td>
+    </tr>-->
+        <!-- cart items -->
+        <tr ng-repeat="item in Item | orderBy:'Iname'">
+            <td>
+                {{item.Iname}}
+            </td>
+            <td class="tdCenter">
+                <div class="input-append">
+                    <input type="number" min="1" value="1" name="Iname" ng-model="quan" class="form-control" />
+                </div>
+            </td>
+            <td class="tdRight">
+                <span ng-bind="item.Iprice*quan " ng-model="Order.TotalAmt=item.Iprice  * quan">
+                </span>
+            </td>
+        </tr>
+        <span ng-bind="getTotal()" ng-model="Order.PayAmt"></span>
+        <!--<tr>
+            {{getTotal(Item,quan)}}
+    </tr>-->
+    </table>
+    <pre>{{Order | json}}</pre>
+</div>

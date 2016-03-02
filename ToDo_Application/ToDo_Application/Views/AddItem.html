@@ -1,0 +1,61 @@
+﻿<div>
+    <form name="exampleForm" class="form-horizontal">
+    <div class="page-header">
+        <h1>
+            Add Item Form</h1>
+    </div>
+    <div class="form-group">
+        <div class="control-label  col-md-2">
+            <label>
+                Product Name :</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" name="Iname" class="form-control" placeholder="Enter Item Name"
+                ng-model="Item.Iname" required />
+        </div>
+    </div>
+    <!-- Select Basic -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="selectbasic">
+            Product Type : </label>
+        <div class="col-md-3">
+            <select id="selectbasic" name="selectbasic" class="form-control" ng-model="Item.Itype">
+                <option value="1">Electronics</option>
+                <option value="2">Home Decor</option>
+            </select>
+        </div>
+    </div>
+    <!-- Textarea -->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="ItemDesc">
+            Product Discription : </label>
+        <div class="col-md-3">
+            <textarea class="form-control" id="ItemDesc" name="ItemDesc" ng-model="Item.Idesc">Add Discription</textarea>
+        </div>
+    </div>
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="textinput">
+            Product Price : </label>
+        <div class="col-md-3">
+            <input id="textinput" name="textinput" type="number" placeholder="Add Price" class="form-control input-md"
+                ng-model="Item.Iprice" required="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label" for="textinput">
+            Quantity : </label>
+        <div class="col-md-3">
+            <input id="text1" name="textinput" type="text" placeholder="Add Quantity" class="form-control input-md" ng-model="Item.Iquantity"
+                required="">            
+        </div>
+    </div>
+    <div class="form-group">
+        <div align="center">
+            <button type="submit" class="btn btn-success" ng-click="saveItem()">
+                Add Item</button>
+        </div>
+    </div>
+    </form>
+</div>

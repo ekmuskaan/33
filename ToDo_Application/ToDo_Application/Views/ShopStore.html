@@ -1,0 +1,37 @@
+﻿<head>
+    <style type="text/css">
+        .glyphicon-shopping-cart
+        {
+        }
+    </style>
+</head>
+<p class="text-info">
+    Welcome to the Angular Store<br />
+    Please select the products you want ….<br />
+</p>
+<p>
+    Search:
+    <input ng-model="search"></p>
+<table class="table table-bordered table-hover">
+    <tr class="well">    
+        <td class="tdRight" colspan="4" style="cursor:pointer"> 
+        <a href="#cart" class="glyphicon glyphicon-shopping-cart" ng-disable="{{CartCount}} < 1"> 
+        
+        <b>{{CartCount}}</b> items,
+         </a>  
+        </td>        
+    </tr>
+    <tr ng-repeat="Item in IteminDb">
+        <td>
+            {{Item.Iname}}
+        </td>
+        <td class="tdRight">
+            {{Item.Iprice}}
+        </td>
+        <td class="tdCenter">
+            <!--<a href="" ng-click="addToCart(Item)">add to cart </a>-->
+
+            <a href="" ng-click="saveToCartLocal(Item)">add to cart </a>
+        </td>
+    </tr>
+</table>
